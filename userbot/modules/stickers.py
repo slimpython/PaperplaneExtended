@@ -83,8 +83,8 @@ async def kang(args):
                     # pack
                     emoji = splat[1]
 
-            packname = f"a{user.id}_by_{user.username}_{pack}"
-            packnick = f"@{user.username}'s userbot pack {pack}"
+            packname = f"Aniketpilantu"
+            packnick = f"Aniket's Sticker Pack"
             cmd = '/newpack'
             file = io.BytesIO()
 
@@ -93,8 +93,8 @@ async def kang(args):
                 file.name = "sticker.png"
                 image.save(file, "PNG")
             else:
-                packname += "_anim"
-                packnick += " animated"
+                packname = f"aniketanimated"
+                packnick = f"Aniket's Animated Sticker pack"
                 cmd = '/newanimated'
 
             response = urllib.request.urlopen(
@@ -168,7 +168,7 @@ async def kang(args):
                     await bot.send_read_acknowledge(conv.chat_id)
 
             await args.edit(
-                f"Sticker added! Your pack can be found [here](t.me/addstickers/{packname})",
+                f"Chura lia! Your pack can be found [here](t.me/addstickers/{packname})",
                 parse_mode='md'
             )
 
